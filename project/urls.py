@@ -15,7 +15,23 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from rest_framework import routers
+from rest_framework.authtoken import views as rest_views
+from app.views import UserViewSet
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    # url(r'^admin/', include(admin.site.urls)),
+
+    # login and logout views for the browsable API
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
+    # view to obtain authentication token
+    url(r'^api-token-auth/', rest_views.obtain_auth_token),
+
+    # route all other requests to router.urls
+    url(r'^', include(router.urls)),
 ]

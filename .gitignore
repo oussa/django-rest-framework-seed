@@ -58,3 +58,6 @@ target/
 
 # Pycharm IDE project settings folder
 .idea
+
+# SQLite database file
+db.sqlite3
