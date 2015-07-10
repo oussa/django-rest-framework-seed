@@ -37,13 +37,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
+    'app',
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -119,3 +121,13 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+
+# CORS headers settings
+"""
+    Please refer to the following URL for all default settings:
+    https://github.com/ottoyiu/django-cors-headers/
+"""
+# Allow requests from all hosts, this setting should be set to True ONLY during development
+# Set it to false and use a Whitelist for production
+CORS_ORIGIN_ALLOW_ALL = True
