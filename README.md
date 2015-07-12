@@ -1,6 +1,4 @@
 # django-rest-framework-seed
-Quick start for a Django REST Framework project with cors headers enabled - It serves as a material for a tutorial which will be published on oussamakrifa.com
-# django-rest-framework-seed
 
 This project is a skeleton for a quickstart web API app that uses Django REST Framework. You can use it to save time and quickly bootstrap your web API projects and dev environment for these projects.
 
@@ -80,7 +78,7 @@ Now browse to the app at http://localhost:8000/
 
 Have a suggestion? Want to contribute? Great!
 
-Please feel free to fork the repo and make a pull request or simply create an issue if you get a bug.
+Please feel free to fork the repo and make a pull request or simply create an issue if you find a bug.
 
 ## License
 
