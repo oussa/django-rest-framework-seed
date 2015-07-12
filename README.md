@@ -42,6 +42,12 @@ Provided that you have all the prerequisites, and you have activated your virtua
 $ pip install -r requirements.txt
 ```
 
+### Setup Database
+```sh
+$ ./manage.py makemigrations
+$ ./manage.py migrate
+$ ./manage.py createsuperuser
+```
 ### Run the project
 
 The simplest way to run the project is by using the built-in Django development server:
